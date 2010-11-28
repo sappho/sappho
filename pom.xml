@@ -5,6 +5,7 @@
 	<groupId>uk.org.sappho.pom</groupId>
 	<artifactId>sappho</artifactId>
 	<version>1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>Sappho Root POM</name>
 
 	<scm>
@@ -23,6 +24,72 @@
 			<url>https://heald.co.uk/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
+
+	<profiles>
+		<profile>
+			<id>norepoman</id>
+			<repositories>
+				<repository>
+					<id>sappho-snapshots</id>
+					<url>https://heald.co.uk/nexus/content/repositories/snapshots</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>sappho-releases</id>
+					<url>https://heald.co.uk/nexus/content/repositories/releases</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>google-releases</id>
+					<url>http://google-maven-repository.googlecode.com/svn/repository</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>atlassian-deps</id>
+					<url>http://m2proxy.atlassian.com/repository/public</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>atlassian-releases</id>
+					<url>http://maven.atlassian.com/content/repositories/atlassian-public</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+			<dependencies>
+				<dependency>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+					<version>4.8.2</version>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
 
 	<build>
 		<plugins>
