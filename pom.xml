@@ -18,12 +18,12 @@
 		<repository>
 			<id>sappho.deploy</id>
 			<name>Sappho Releases</name>
-			<url>https://heald.co.uk/nexus/content/repositories/releases</url>
+			<url>dav:https://heald.co.uk/nexus/content/repositories/releases</url>
 		</repository>
 		<snapshotRepository>
 			<id>sappho.deploy</id>
 			<name>Sappho Snapshots</name>
-			<url>https://heald.co.uk/nexus/content/repositories/snapshots</url>
+			<url>dav:https://heald.co.uk/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -40,7 +40,7 @@
 		<extensions>
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-http-lightweight</artifactId>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
 				<version>1.0-beta-7</version>
 			</extension>
 		</extensions>
