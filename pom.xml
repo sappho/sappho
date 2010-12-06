@@ -10,78 +10,21 @@
 
 	<scm>
 		<connection>scm:git:https://github.com/andrewheald/sappho.git</connection>
+		<developerConnection>scm:git:https://github.com/andrewheald/sappho.git</developerConnection>
 	</scm>
 
 	<distributionManagement>
 		<repository>
 			<id>sappho.deploy</id>
 			<name>Sappho Releases</name>
-			<url>dav:https://heald.co.uk/nexus/content/repositories/releases</url>
+			<url>https://heald.co.uk/nexus/content/repositories/releases</url>
 		</repository>
 		<snapshotRepository>
 			<id>sappho.deploy</id>
 			<name>Sappho Snapshots</name>
-			<url>dav:https://heald.co.uk/nexus/content/repositories/snapshots</url>
+			<url>https://heald.co.uk/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
-
-	<profiles>
-		<profile>
-			<id>norepoman</id>
-			<repositories>
-				<repository>
-					<id>sappho-snapshots</id>
-					<url>http://sappho.org.uk/nexus/content/repositories/snapshots</url>
-					<releases>
-						<enabled>true</enabled>
-					</releases>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</repository>
-				<repository>
-					<id>sappho-releases</id>
-					<url>http://sappho.org.uk/nexus/content/repositories/releases</url>
-					<releases>
-						<enabled>true</enabled>
-					</releases>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</repository>
-				<repository>
-					<id>google-releases</id>
-					<url>http://google-maven-repository.googlecode.com/svn/repository</url>
-					<releases>
-						<enabled>true</enabled>
-					</releases>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</repository>
-				<repository>
-					<id>atlassian-deps</id>
-					<url>http://m2proxy.atlassian.com/repository/public</url>
-					<releases>
-						<enabled>true</enabled>
-					</releases>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</repository>
-				<repository>
-					<id>atlassian-releases</id>
-					<url>http://maven.atlassian.com/content/repositories/atlassian-public</url>
-					<releases>
-						<enabled>true</enabled>
-					</releases>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</repository>
-			</repositories>
-		</profile>
-	</profiles>
 
 	<dependencies>
 		<dependency>
@@ -93,6 +36,13 @@
 	</dependencies>
 
 	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-http</artifactId>
+				<version>1.0-beta-7</version>
+			</extension>
+		</extensions>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -120,6 +70,11 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.4.3</version>
 				<configuration>
@@ -130,6 +85,11 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>2.4</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.1</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
