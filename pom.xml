@@ -8,11 +8,42 @@
 	<version>1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Sappho Root POM</name>
+	<description>This root POM establishes the basic build configuration to be applied to all Sappho projects</description>
+	<url>http://sappho.org.uk/sappho-site/?page_id=47</url>
+	<inceptionYear>2010</inceptionYear>
 
 	<scm>
 		<connection>scm:git:https://github.com/andrewheald/sappho.git</connection>
 		<developerConnection>scm:git:https://github.com/andrewheald/sappho.git</developerConnection>
+		<url>https://github.com/andrewheald/sappho</url>
 	</scm>
+
+	<ciManagement>
+		<system>Hudson</system>
+		<url>http://sappho.org.uk/hudson/view/All/job/sappho.dev.ci.sappho</url>
+	</ciManagement>
+
+	<issueManagement>
+		<system>Jira</system>
+		<url>http://sappho.org.uk/jira/browse/CHM</url>
+	</issueManagement>
+
+	<licenses>
+		<license>
+			<name>GNU Affero General Public License, version 3, 19 November 2007</name>
+			<url>http://www.gnu.org/licenses/agpl.html</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>andrewheald</id>
+			<name>Andrew Heald</name>
+			<roles>
+				<role>Developer, configuration and build manager</role>
+			</roles>
+		</developer>
+	</developers>
 
 	<distributionManagement>
 		<repository>
@@ -96,6 +127,21 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<version>2.8</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>2.5</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>2.3.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.6</version>
 			</plugin>
 		</plugins>
 	</build>
