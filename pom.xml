@@ -8,18 +8,18 @@
 	<packaging>pom</packaging>
 	<name>Sappho Root POM</name>
 	<description>This root POM establishes the basic build configuration to be applied to all Sappho projects</description>
-	<url>http://sappho.org.uk/sappho-site/?page_id=47</url>
+	<url>https://wiki.sappho.org.uk/display/POM/sappho-maven</url>
 	<inceptionYear>2010</inceptionYear>
 
 	<scm>
-		<connection>scm:git:https://github.com/sappho/sappho.git</connection>
-		<developerConnection>scm:git:https://github.com/sappho/sappho.git</developerConnection>
-		<url>http://github.com/andrewheald/sappho</url>
+		<connection>scm:git:https://git.sappho.org.uk/scm/ENV/sappho-maven.git</connection>
+		<developerConnection>scm:git:https://git.sappho.org.uk/scm/ENV/sappho-maven.git</developerConnection>
+		<url>https://git.sappho.org.uk/projects/ENV/repos/sappho-maven/browse</url>
 	</scm>
 
 	<licenses>
 		<license>
-			<name>GNU Affero General Public License, version 3, 19 November 2007</name>
+			<name>GNU Affero General Public License, version 3</name>
 			<url>http://www.gnu.org/licenses/agpl.html</url>
 		</license>
 	</licenses>
@@ -29,7 +29,7 @@
 			<id>andrewheald</id>
 			<name>Andrew Heald</name>
 			<roles>
-				<role>Developer and release manager</role>
+				<role>Developer and build Manager</role>
 			</roles>
 		</developer>
 	</developers>
