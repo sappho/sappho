@@ -29,7 +29,7 @@
 			<id>andrewheald</id>
 			<name>Andrew Heald</name>
 			<roles>
-				<role>Developer, configuration and build manager</role>
+				<role>Developer and release manager</role>
 			</roles>
 		</developer>
 	</developers>
@@ -38,23 +38,14 @@
 		<repository>
 			<id>sappho.deploy</id>
 			<name>Sappho Releases</name>
-			<url>https://heald.co.uk/nexus/content/repositories/releases</url>
+			<url>https://nexus.sappho.org.uk/content/repositories/releases</url>
 		</repository>
 		<snapshotRepository>
 			<id>sappho.deploy</id>
 			<name>Sappho Snapshots</name>
-			<url>https://heald.co.uk/nexus/content/repositories/snapshots</url>
+			<url>https://nexus.sappho.org.uk/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
-
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.10</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
 
 	<build>
 		<plugins>
@@ -63,8 +54,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.6</source>
+					<target>1.6</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
