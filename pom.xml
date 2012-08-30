@@ -15,7 +15,7 @@
 		<connection>scm:git:ssh://git@git.sappho.org.uk:7999/ENV/sappho-maven.git</connection>
 		<developerConnection>scm:git:ssh://git@git.sappho.org.uk:7999/ENV/sappho-maven.git</developerConnection>
 		<url>https://git.sappho.org.uk/projects/ENV/repos/sappho-maven/browse</url>
-	  <tag>HEAD</tag>
+		<tag>HEAD</tag>
   </scm>
 
 	<licenses>
