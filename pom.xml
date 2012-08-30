@@ -4,7 +4,7 @@
 
 	<groupId>uk.org.sappho.pom</groupId>
 	<artifactId>sappho-maven</artifactId>
-	<version>4-SNAPSHOT</version>
+	<version>4</version>
 	<packaging>pom</packaging>
 	<name>Sappho Root POM</name>
 	<description>This root POM establishes the basic build configuration to be applied to all Sappho projects</description>
@@ -15,7 +15,8 @@
 		<connection>scm:git:ssh://git@git.sappho.org.uk:7999/ENV/sappho-maven.git</connection>
 		<developerConnection>scm:git:ssh://git@git.sappho.org.uk:7999/ENV/sappho-maven.git</developerConnection>
 		<url>https://git.sappho.org.uk/projects/ENV/repos/sappho-maven/browse</url>
-	</scm>
+	  <tag>sappho-maven-4</tag>
+  </scm>
 
 	<licenses>
 		<license>
